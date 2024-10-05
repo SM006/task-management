@@ -9,7 +9,7 @@ class HighPriorityTask extends Task {
     // Overridden method to display task details
     @Override
     public void displayTask() {
-        System.out.println("Priority: High");
+        System.out.println("Priority: Highhhhhhhhh");
         super.displayTask();
     }
 }
