@@ -1,15 +1,9 @@
 // Derived class for High Priority Task
-class HighPriorityTask extends Task {
-    private final int priority = 1; // 1 represents high priority
+class HighPriorityTask extends Task 
+{
 
-    public HighPriorityTask(String name, String description, String deadline) {
-        super(name, description, deadline);
-    }
-
-    // Overridden method to display task details
-    @Override
-    public void displayTask() {
-        System.out.println("Priority: High");
-        super.displayTask();
+    public HighPriorityTask(String name, String description, String deadline) 
+    {
+        super(name, description, deadline, "High"); // Pass "High" as the priority to Task
     }
 }

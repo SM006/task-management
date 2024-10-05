@@ -1,14 +1,9 @@
-class LowPriorityTask extends Task {
-    private final int priority = 3; // 3 represents low priority
+class LowPriorityTask extends Task 
+{
 
-    public LowPriorityTask(String name, String description, String deadline) {
-        super(name, description, deadline);
+    public LowPriorityTask(String name, String description, String deadline) 
+    {
+        super(name, description, deadline, "Low"); // Pass "High" as the priority to Task
     }
 
-    // Overridden method to display task details
-    @Override
-    public void displayTask() {
-        System.out.println("Priority: Low");
-        super.displayTask();
-    }
 }

@@ -1,12 +1,14 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
-public class TaskManagementSystem {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class TaskManagementSystem 
+{
+    public static void main(String[] args)
+     {
+        Scanner sc = new Scanner(System.in);
         TaskManager manager = new TaskManager();
 
-        while (true) {
+        while(true) 
+        {
             System.out.println("\nTask Management System");
             System.out.println("1. Add Task");
             System.out.println("2. Remove Task");
@@ -14,27 +16,33 @@ public class TaskManagementSystem {
             System.out.println("4. View All Tasks");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            int choice = sc.nextInt();
+            sc.nextLine(); 
 
-            switch (choice) {
+            switch (choice) 
+            {
                 case 1:
                     System.out.print("Enter Task Name: ");
-                    String name = scanner.nextLine();
+                    String name = sc.nextLine();
                     System.out.print("Enter Task Description: ");
-                    String description = scanner.nextLine();
+                    String description = sc.nextLine();
                     System.out.print("Enter Task Deadline: ");
-                    String deadline = scanner.nextLine();
+                    String deadline = sc.nextLine();
                     System.out.println("Select Priority: 1. High, 2. Medium, 3. Low");
-                    int priority = scanner.nextInt();
-                    scanner.nextLine();
+                    int priority = sc.nextInt();
+                    sc.nextLine();
                     
                     Task task;
-                    if (priority == 1) {
+                    if (priority == 1) 
+                    {
                         task = new HighPriorityTask(name, description, deadline);
-                    } else if (priority == 2) {
+                    } 
+                    else if (priority == 2) 
+                    {
                         task = new MediumPriorityTask(name, description, deadline);
-                    } else {
+                    } 
+                    else 
+                    {
                         task = new LowPriorityTask(name, description, deadline);
                     }
 
@@ -43,15 +51,15 @@ public class TaskManagementSystem {
 
                 case 2:
                     System.out.print("Enter Task Name to Remove: ");
-                    String removeName = scanner.nextLine();
+                    String removeName = sc.nextLine();
                     manager.removeTask(removeName);
                     break;
 
                 case 3:
                     System.out.print("Enter Task Name to Update: ");
-                    String updateName = scanner.nextLine();
+                    String updateName = sc.nextLine();
                     System.out.print("Enter New Status (Pending/Completed): ");
-                    String newStatus = scanner.nextLine();
+                    String newStatus = sc.nextLine();
                     manager.updateStatus(updateName, newStatus);
                     break;
 
@@ -61,7 +69,7 @@ public class TaskManagementSystem {
 
                 case 5:
                     System.out.println("Exiting...");
-                    scanner.close();
+                    sc.close();
                     return;
 
                 default:
