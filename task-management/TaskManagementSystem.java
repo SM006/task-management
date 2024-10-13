@@ -18,18 +18,26 @@ public class TaskManagementSystem
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
             sc.nextLine(); 
+            System.out.println();
 
             switch (choice) 
             {
                 case 1:
                     System.out.print("Enter Task Name: ");
                     String name = sc.nextLine();
+                    System.out.println();
+
                     System.out.print("Enter Task Description: ");
                     String description = sc.nextLine();
+                    System.out.println();
+
                     System.out.print("Enter Task Deadline: ");
                     String deadline = sc.nextLine();
+                    System.out.println();
+
                     System.out.println("Select Priority: 1. High, 2. Medium, 3. Low");
                     int priority = sc.nextInt();
+                    System.out.println();
                     sc.nextLine();
                     
                     Task task;

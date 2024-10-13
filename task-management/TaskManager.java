@@ -45,28 +45,31 @@ class TaskManager
     // Display all tasks
     public void displayTasks() 
     {
+        System.out.println();
         System.out.println("High Priority Tasks:");
         for (Task task : taskList) 
         {
             if (task.priority.equals("High")) 
             {
                 task.displayTask();
-                System.out.println(); // Print a newline for better readability
+                System.out.println(); 
             }
         }
-
+    
         System.out.println("-------------------");
-
+    
         System.out.println("Medium Priority Tasks:");
-        for (Task task : taskList) {
-            if (task.priority.equals("Medium")) {
+        for (Task task : taskList) 
+        {
+            if (task.priority.equals("Medium")) 
+            {
                 task.displayTask();
                 System.out.println();
             }
         }
-
+    
         System.out.println("-------------------");
-
+    
         System.out.println("Low Priority Tasks:");
         for (Task task : taskList) 
         {
