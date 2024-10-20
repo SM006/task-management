@@ -6,4 +6,9 @@ class HighPriorityTask extends Task
     {
         super(name, description, deadline, "High"); // Pass "High" as the priority to Task
     }
+
+    public String getTaskType() 
+    {
+        return "High Priority Task";
+    }
 }

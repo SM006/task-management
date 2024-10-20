@@ -13,6 +13,10 @@ public abstract class Task {
         this.status = "Pending"; // Default status
     }
 
+    public String getTaskType() {
+        return "Generic Task";
+    }
+
     public String getName() {
         return name;
     }
