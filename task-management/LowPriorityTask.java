@@ -1,3 +1,4 @@
+
 class LowPriorityTask extends Task 
 {
 
@@ -5,5 +6,4 @@ class LowPriorityTask extends Task
     {
         super(name, description, deadline, "Low"); // Pass "High" as the priority to Task
     }
-
 }
