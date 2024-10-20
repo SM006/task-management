@@ -32,6 +32,7 @@ public class TaskManagementSystem extends JFrame {
         Color textColor = new Color(242, 242, 242); // Light gray text
         Color buttonColor = new Color(0, 212, 255); // Bright teal for buttons
         Color buttonTextColor = new Color(26, 26, 26); // Dark background for button text
+        Color panelborderColor = new Color(255,255,255);
 
         // Main panel to hold everything
         JPanel mainPanel = new JPanel();
@@ -53,7 +54,7 @@ public class TaskManagementSystem extends JFrame {
         // Task input section
         JPanel inputPanel = new JPanel(new GridLayout(5, 2));
         inputPanel.setBackground(panelColor);
-        inputPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(borderColor), "Add Task", 0, 0, null, textColor));
+        inputPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(panelborderColor), "Add Task", 0, 0, null, textColor));
 
         inputPanel.add(createLabel("Name:", textColor));
         nameField = new JTextField();
@@ -82,7 +83,7 @@ public class TaskManagementSystem extends JFrame {
         // Task removal section
         JPanel removePanel = new JPanel(new GridLayout(2, 2));
         removePanel.setBackground(panelColor);
-        removePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(borderColor), "Remove Task", 0, 0, null, textColor));
+        removePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(panelborderColor), "Remove Task", 0, 0, null, textColor));
 
         removePanel.add(createLabel("Remove Task (Name):", textColor));
         removeTaskField = new JTextField();
@@ -98,7 +99,7 @@ public class TaskManagementSystem extends JFrame {
         // Task update section
         JPanel updatePanel = new JPanel(new GridLayout(3, 2));
         updatePanel.setBackground(panelColor);
-        updatePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(borderColor), "Update Task Status", 0, 0, null, textColor));
+        updatePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(panelborderColor), "Update Task Status", 0, 0, null, textColor));
 
         updatePanel.add(createLabel("Update Task (Name):", textColor));
         updateTaskField = new JTextField();

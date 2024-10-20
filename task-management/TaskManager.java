@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 class TaskManager {
     ArrayList<Task> taskList = new ArrayList<>();
@@ -10,16 +11,18 @@ class TaskManager {
     }
 
     // Remove a task by name
-    public void removeTask(String name) {
-        for (Task task : taskList) {
-            if (task.getName().equals(name)) {
-                taskList.remove(task);
-                System.out.println("Task removed successfully!");
-                return;
+    public void removeTask(String taskName) {
+        // Iterate over the task list and remove the task that matches the name
+        for (Iterator<Task> iterator = taskList.iterator(); iterator.hasNext();) {
+            Task task = iterator.next();
+            if (task.getName().equals(taskName)) { // Compare names using equals
+                iterator.remove(); // Remove task from the list
+                break; // Stop once the task is found and removed
             }
         }
-        System.out.println("Task not found!");
     }
+    
+    
 
     // Update task status by name
     public void updateStatus(String name, String newStatus) {
